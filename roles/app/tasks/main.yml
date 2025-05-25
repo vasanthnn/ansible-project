@@ -1,0 +1,18 @@
+- name: Remove existing state files
+  file:
+      path: /var/www/html
+      state: absent
+
+- name: clone static site from github
+  git:
+    repo: https://www.github.com/vasanthnn/static-site
+    dest: /var/www/html
+    force: yes
+
+- name: Set permissions for Nginx to access the site
+  file:
+    path: /var/www/html
+    owner: www-data
+    group: www-data
+    recurse: yes
+

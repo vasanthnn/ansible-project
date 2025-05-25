@@ -1,0 +1,6 @@
+- name: Add SSH public key
+  authorized_key:
+    user: doodle
+    key: "{{ lookup('file', 'ssh/publickey') }}"
+
+# for creating the public key from private key use the command  "ssh-keygen -y -f privatekey.pem > publickey.pub"
