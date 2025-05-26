@@ -6,7 +6,6 @@ simple configuration automation using ansible to get the code from the github an
 This project uses **Ansible** to automate the deployment of a static website hosted on **GitHub** to an **EC2 instance** running **Ubuntu** and **Nginx**.
 
 ## 🧰 Project Structure
-
 ├── inventory.ini
 ├── setup.yml
 └── roles/
